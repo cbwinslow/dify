@@ -76,6 +76,18 @@ docker compose up -d
 
 After running, you can access the Dify dashboard in your browser at [http://localhost/install](http://localhost/install) and start the initialization process.
 
+### Quick install script
+
+For convenience, the repository provides an `install_deploy.sh` script that can set up and deploy the development server. The script automatically detects whether Docker is available, falls back to a local Poetry environment, or can deploy to a remote host via SSH.
+
+Basic usage:
+
+```bash
+bash install_deploy.sh                # auto detect best method
+bash install_deploy.sh --method docker
+bash install_deploy.sh --method ssh --target user@remote
+```
+
 #### Seeking help
 
 Please refer to our [FAQ](https://docs.dify.ai/getting-started/install-self-hosted/faqs) if you encounter problems setting up Dify. Reach out to [the community and us](#community--contact) if you are still having issues.
